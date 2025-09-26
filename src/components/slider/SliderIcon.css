@@ -1,0 +1,56 @@
+.sliderIcon {
+    position: relative;
+    width: fit-content;
+    justify-self: center;
+    margin-block: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.sliderIcon img {
+    position: relative;
+    width: 4em;
+    height: 4em;
+}
+.sliderIcon .sliderIconBar {
+    box-sizing: border-box;
+    content: "";
+    width: 7em;
+    height: 1em;
+    padding: 5px 15px;
+    border-radius: 20px;
+    background-color: white;
+    border: 10px  solid #4D64B0;
+    margin-inline: -10%;
+}
+.sliderIconNumber {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4D64B0;
+    border-radius: 100%;
+    width: 2em;
+    height: 2em;
+    font-size: 2em;
+    user-select: none;
+}
+.deleteSlider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    position: absolute;
+    width: 1em;
+    height: 1em;
+    border: darkred solid 1px;
+    color: rgba(255, 255, 255, 1);
+    background: red;
+    right: 5%;
+    top: 1%;
+    z-index: 20;
+    border-radius: 100%;
+    user-select: none;
+}

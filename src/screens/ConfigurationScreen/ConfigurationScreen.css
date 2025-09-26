@@ -1,0 +1,256 @@
+@font-face {
+    font-family: 'Londrina';
+    src: local('Londrina'), url(../../assets/fonts/LondrinaSolidRegular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway'), url(../../assets/fonts/RalewayRegular.woff) format('woff');
+}
+:root{
+    --textShadow: rgba(0, 0, 0, 0.114) 5px 5px 5px;
+    --boxShadow: inset rgba(0, 0, 0, 0.288) 8px 8px 1px;
+    --boxShadowOut: rgba(0, 0, 0, 0.15) 12px 12px 1px;
+    
+}
+.config-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.config-container * {
+    box-sizing: border-box;
+    font-family: Londrina;
+    font-weight: 100;
+    color: white;
+
+}
+body {
+    background-color:#544482;
+}
+
+
+.App {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    /* min-width: 800px;
+    min-height: 600px;  */
+    overflow: hidden;
+}
+
+.config-container {
+    /* position: relative; */
+    width: 80%;
+    height: 90%;
+    /* border: black 10px solid;  */
+    display: grid;
+    margin: auto;
+    grid-template-areas: 
+            "t t t"
+            "a a a"
+            "b c d"
+            "b c d";
+    grid-template-rows: 10% 15% auto auto;
+    grid-template-columns: 37% 26% 37%;
+    overflow: hidden;
+}
+
+.config-title{
+    grid-area: t;
+    color: white;
+    font-family: Raleway;
+    font-size: 2rem;
+    text-shadow: var(--textShadow);
+    font-family: Londrina;
+    font-weight: 100;
+}
+
+.config-email{
+    grid-area: a;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 34% 55%;
+}
+.config-email-title {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 1%;
+}
+.config-email-title h3 {
+    /* justify-self: left; */
+    margin:0;
+    padding-left: 3%;
+    text-shadow: var(--textShadow);
+}
+.config-email label {
+    justify-self: left;
+    width: 45%;
+    height: 100%;
+    padding-left: 1%;
+    min-height: 40px;
+    
+}
+.config-email-errors {
+    margin-left: 3%;
+    color: red;
+    text-shadow: 1px 1px 5px rgba(255, 0, 0, 0.2);
+    opacity: 0;
+    font-size: large;
+}
+.show-errors{
+    opacity: 1;
+}
+.config-email-error-border{
+    border-color: red;
+    filter: drop-shadow(0px 0px 10px rgba(255, 0, 0, 0.4))
+}
+.config-email-input{
+    box-shadow: var(--boxShadow);
+    color: black;
+    border-radius: 25px;
+    padding-left: 4%;
+    width: 100%;
+    height: 100%;
+    font-size: x-large;
+}
+
+.config-module-box{
+    position: relative;
+    background-color: white;
+    width: 95%;
+    height: 95%;
+    margin: auto;
+    border-radius: 2rem;
+    box-shadow: var(--boxShadow);
+
+    display: flex;
+    flex-direction: column;
+    padding-inline: 2%;
+    padding-block: 1%;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge*/
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.1) transparent;
+    transition: all 1s;
+}
+.config-module-box::-webkit-scrollbar{
+    display: none;
+    /* overflow: hidden; */
+}
+.config-active-modules {
+    grid-area: b;
+}
+.config-inactive-modules{
+    grid-area: d;
+}
+.modules-wrapper {
+    --moduleHeight: 100px;
+    position: relative;
+    width: 75%;
+    height: var(--moduleHeight); 
+    margin-inline: auto;
+    margin-top: 5%;
+    opacity: 0; 
+    
+}
+.modules-content{
+    position: relative;
+    width: 100%;
+    height: var(--moduleHeight);
+    pointer-events: none;
+}
+.config-module-bg{
+    width: 100%;
+    height: 100%;
+    margin-inline: auto;
+    border-radius: 30px;
+    transform: perspective(600px) rotateY(-5deg) rotate(5deg) skewY(-5deg);
+    display: flex;
+    box-shadow: var(--boxShadowOut);
+}
+.no-shadow {
+    box-shadow: none;
+}
+.config-module-click {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: perspective(600px) rotateY(-5deg) rotate(5deg) skewY(-5deg);
+    width: 100%;
+    height: var(--moduleHeight);
+    border-radius: 30px;
+    background-color: transparent;
+    border: none;
+    z-index: 99;
+
+    
+
+}
+.config-module-text{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5%;
+    width: 60%;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    font-family: Londrina;
+    text-shadow: var(--textShadow);
+    font-size: x-large;
+    /* overflow: hidden; */
+    flex-wrap: wrap;
+    justify-content: center;
+    user-select: none;
+}
+.config-module-selectArea {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    
+    border-radius: 100%;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%) perspective(600px) rotateY(-5deg) rotate(5deg) skewY(-5deg);
+}
+.unselected {
+    background-color: rgb(198, 212, 198);   
+}
+
+.config-btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+}
+.delete-btn {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 0;
+    height: 80px;
+    width: 80px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+}
+.slider-btn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0;
+    scale: 0.4;
+
+}
+.module-not-enabled {
+    filter: grayscale(0.9)
+}

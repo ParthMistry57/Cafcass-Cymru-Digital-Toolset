@@ -1,0 +1,207 @@
+.complete-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background: rgb(116, 183, 284);
+}
+
+.complete-header {
+  top: 0;
+  width: 50%;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../assets/images/Header.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.complete-title {
+  margin: -40px 0 0 0;
+  font-size: 2em; /* Relative units */
+  color: white;
+  font-family: "ABeeZee", sans-serif;
+  font-weight: 900;
+  z-index: 2;
+}
+
+.complete-main-content {
+  display: flex;
+  width: 80%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 120px;
+  margin: 0 auto;
+}
+
+.complete-avatar-display-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 45%;
+  position: relative;
+  background-size: cover;
+  margin-left: 100px;
+}
+
+.complete-avatar-display-container .avatar-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40%;
+  width: auto;
+}
+
+.complete-avatar-display-container .avatar-img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+.complete-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+}
+
+.complete-button-container .complete-button-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.complete-text-bg {
+  background-image: url(../../assets/images/text-bg.png);
+  background-size: 120% 120%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  margin-top: -300px;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+/* Modal Styles */
+.complete-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.complete-modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  max-width: 800px;
+  width: 100%;
+  max-height: 90vh; /* Limit the height of the modal */
+  overflow-y: auto; /* Enable scrolling if content overflows */
+  text-align: center;
+}
+  
+.complete-modal h2 {
+  margin-top: 0;
+  font-size: 1.5em; /* Relative units */
+}
+  
+.complete-modal p {
+  margin-top: 10px;
+  font-size: 1em; /* Relative units */
+  color: #333;
+}
+  
+.complete-modal-screenshot-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+}
+  
+.complete-screenshot {
+  flex: 1;
+  text-align: center;
+}
+  
+.complete-screenshot img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.complete-modal-button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+  
+.complete-modal-button {
+  padding: 10px 20px;
+  font-size: 1em; /* Relative units */
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+  
+.complete-modal-button:hover {
+  background-color: #0056b3;
+}
+  
+.final-comments-left-button {
+  position: absolute;
+  top: 50%;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: 20px;
+  background-image: url('../../assets/images/left-arrow.png');
+}
+
+
+/* Confirm button when enabled */
+.complete-modal-button-primary {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.complete-modal-button-primary:hover {
+  background-color: #218838;
+}
+
+/* Confirm button when disabled */
+.complete-modal-button-primary:disabled {
+  background-color: #cccccc; /* Gray color when disabled */
+  color: #666666; /* Light gray text when disabled */
+  cursor: not-allowed; /* Change cursor to indicate it's not clickable */
+  transform: none; /* Prevent any transform animations */
+}

@@ -1,0 +1,72 @@
+.start-screen {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    padding-top: 20vh;
+}
+
+.start-screen-title {
+    text-align: center;
+    margin: 40px 0;
+    font-size: 4em;
+    font-family: "ABeeZee", sans-serif;
+    font-weight: 900;
+}
+
+.start-screen-title-line1 {
+    font-family: "ABeeZee", sans-serif;
+    color: white;
+    display: block;
+}
+
+.start-screen-title-line2 {
+    font-family: "ABeeZee", sans-serif;
+    color: rgb(147, 216, 239);
+    display: block;
+}
+
+.start-screen-language-selection {
+    width: 200px;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 10px 20px 10px 20px;
+    margin-bottom: 20px;
+}
+
+.start-screen-language-button {
+    width: 100%;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1em;
+    border: none;
+}
+
+.start-screen-language-button.selected {
+    background-color: gray;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    border: none;
+}
+
+.start-screen-start-button {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 20px 60px;
+    background-color: rgb(127, 190, 34);
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+}

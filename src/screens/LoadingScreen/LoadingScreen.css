@@ -1,0 +1,65 @@
+.loading-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  margin: 0;
+  width: 100%;  
+}
+
+.loading-screen-logo {
+  width: 50%;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+.loading-screen-progress-container {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  height: 40px;
+  margin-bottom: 40px;
+}
+
+.loading-screen-progress-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.loading-screen-progress-bar {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: none;
+}
+
+.loading-screen-progress-fg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.loading-screen-progress-text {
+  position: absolute;
+  right: 10px;
+  color: white;
+  font-size: 1.5em;
+  text-align: right;
+  font-weight: bold;
+}
+
+.loading-screen-loading-message {
+  font-size: 2em;
+  color: rgb(82, 69, 126);
+  font-weight: bold;
+}

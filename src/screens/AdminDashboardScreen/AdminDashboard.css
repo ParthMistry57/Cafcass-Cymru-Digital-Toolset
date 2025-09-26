@@ -1,0 +1,146 @@
+.admin-dashboard {
+    font-family: var(--defaultFont);
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background: url('../../assets/images/startBG.png') no-repeat center center;
+    background-size: cover;
+}
+
+.dashboard-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    position: relative;
+}
+
+.dashboard-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.dashboard-subtitle {
+    font-size: 16px;
+    margin: 10px 0 20px 0;
+}
+
+.cases-list {
+    max-height: 200px;
+    overflow-y: scroll; /* Always show the scrollbar */
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+}
+
+/* Custom scrollbar styles */
+.cases-list::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+.cases-list::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the scrollbar track */
+    border-radius: 10px;
+}
+
+.cases-list::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar handle */
+    border-radius: 10px;
+}
+
+.cases-list::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scrollbar handle on hover */
+}
+
+.case-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.case-item:last-child {
+    border-bottom: none;
+}
+
+.case-item:hover {
+    background-color: #f0f0f0;
+}
+
+.case-item.selected {
+    background-color: #d3d3d3;
+}
+
+.dashboard-buttons {
+    display: flex;
+    justify-content: space-around; /* Space between buttons */
+    margin-bottom: 20px;
+}
+
+.continue-button {
+    padding: 10px 20px;
+    background-size: contain;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 25px;
+    width: 120px; 
+    height: 50px; 
+    display: flex;
+    cursor: pointer;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-family: "Londrina";
+    text-shadow: rgba(0, 0, 0, 0.386) 1px 1px 10px;
+}
+
+.btn:disabled {
+    filter: grayscale(0.9)
+}
+
+.new-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+    width: 120px; 
+    height: 50px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: "Londrina";
+    text-shadow: rgba(0, 0, 0, 0.386) 1px 1px 10px;
+}
+
+.configuration-button {
+    padding: 10px 20px;
+    width: 200px; /* Adjusted width */
+    height: 60px; /* Adjusted height */
+    color: white;
+    border: none;
+    border-radius: 10px; /* Slightly rounded corners */
+    font-size: 24px; /* Larger font size */
+    text-align: center;
+    outline: none;
+    font-weight: bold;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add some shadow for depth */
+}

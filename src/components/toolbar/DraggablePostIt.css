@@ -1,0 +1,51 @@
+.postit-note {
+    width: 200px;
+    height: 150px;
+    background-color: #feff9c; /* Post-It yellow */
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    position: absolute;
+    cursor: move;
+    z-index: 2;
+  }
+  
+  .postit-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+  }
+  
+  .move-button {
+    background-color: #c5a3ff;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    color: white;
+    cursor: grab;
+  }
+  
+  .delete-button {
+    background-color: #f28b82;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .postit-text {
+    width: 100%;
+    height: calc(100% - 35px);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 14px;
+    font-family: sans-serif;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  

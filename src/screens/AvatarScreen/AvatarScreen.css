@@ -1,0 +1,305 @@
+.avatar-page-wrapper * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.avatar-page-wrapper {
+  display: grid;
+  grid-template-rows: 15% 65% 20%;
+  height: 100%;
+  width: 100%;
+  min-height: 500px;
+  background: #544482;
+}
+
+.avatar-header {
+  position: relative;
+  display: grid;
+
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+
+  margin-top: 0;
+  padding-top: 0;
+  top: 0;
+  width: min(80vw, 80vh);
+  height: 15vh;
+  justify-self: center;
+}
+
+#topwave {
+  display: block;
+  opacity: 100%;
+  transform: scale(1.3);
+  width: 100%;
+  fill: #4d64b0;
+  overflow: visible;
+  z-index: 2;
+
+  > text {
+    fill: white;
+    font-size: 1.3rem;
+    font-family: "Londrina", sans-serif;
+    text-anchor: middle;
+    text-shadow: rgba(0, 0, 0, 0.114) 5px 5px 5px;
+  }
+}
+
+#topwave_shadow {
+  position: absolute;
+  fill: rgba(0, 0, 0, 1);
+  transform: scaleX(1.3) scaleY(1) translateY(-10px);
+  opacity: 20%;
+  filter: drop-shadow(0px 8px 3px black);
+  z-index: 1;
+  width: 100%;
+  justify-self: center;
+}
+
+#bottom-wave {
+  width: 50%;
+  height: 100%;
+}
+
+.avatar-main {
+  display: grid;
+  grid-template-rows: 25% 78% 30%;
+  width: 100%;
+  height: 100%;
+  min-width: 800px;
+  min-height: 400px;
+}
+
+.avatar-name {
+  display: grid;
+  grid-template-rows: 30% 50% 20%;
+
+  justify-content: center;
+  align-content: center;
+  z-index: 10;
+  font-family: "Londrina";
+  color: #96efe2;
+  letter-spacing: 0.1rem;
+}
+
+.avatar-name > label {
+  height: 100%;
+  width: 100%;
+}
+
+.avatar-name > label > input {
+  border-radius: 50px;
+  height: 100%;
+  width: 100%;
+  min-width: 400px;
+  font-size: 3rem;
+  padding-block: 10px;
+  padding-inline: 30px;
+  border-width: 7px;
+  box-shadow: inset 8px 12px 2px rgba(0, 0, 0, 0.395);
+  font-family: "Londrina";
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.avatar-input-error {
+  border-color: rgb(230, 0, 0);
+}
+
+.avatar-name-error {
+  color: rgb(230, 0, 0);
+  font-size: 1.4rem;
+  letter-spacing: 0.05rem;
+  justify-self: left;
+  padding-left: 5%;
+  text-shadow: black 0 0 2px;
+  font-family: Londrina;
+}
+
+.avatar-selector {
+  display: grid;
+  width: 45%;
+  min-width: 500px;
+  height: 100%;
+  justify-self: center;
+  grid-template-columns: 30% 40% 30%;
+  grid-template-rows: 100%;
+  z-index: 5;
+  margin-top: 2%;
+}
+
+.avatar-btns {
+  display: grid;
+  grid-template-rows: 33% 33% 33%;
+  align-items: center;
+  justify-items: center;
+  height: 100%;
+}
+
+.avatar-btns > button {
+  font-family: Londrina;
+  font-size: 2rem;
+  width: 40%;
+  max-width: 80px;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  color: white;
+
+  background-color: #b04da3;
+}
+
+.avatar-display {
+  justify-content: center;
+  justify-self: center;
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+}
+
+.avatar-display > .avatar-wrapper {
+  position: relative;
+  background-color: transparent;
+  justify-self: center;
+  display: flex;
+  height: inherit;
+  width: inherit;
+  width: fit-content;
+  /* align-self: center; */
+}
+
+.avatar-display > .avatar-wrapper > .avatar-img {
+  width: 100%;
+  height: 100%;
+  justify-self: center;
+  align-self: flex-start;
+}
+
+.avatar-bottom-row {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  grid-template-areas: "a b c";
+  align-items: center;
+  justify-items: center;
+}
+
+.avatar-random-button {
+  grid-area: b;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  scale: 0.9;
+  padding-left: 2.5%;
+}
+
+.avatar-start-button {
+  grid-area: c;
+  scale: 1;
+  padding-left: 15%;
+}
+
+.avatar-confirmation-screen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backdrop-filter: brightness(0.5);
+  backdrop-filter: brightness(0.5);
+  z-index: 20;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+  align-items: center;
+  justify-items: center;
+}
+
+.avatar-confirmation {
+  width: 30%;
+  min-width: 500px;
+  height: 70%;
+  border-radius: 100px;
+  box-shadow: var(--boxShadow);
+  filter: drop-shadow(rgba(0, 0, 0, 0.53) 0 0 10px);
+  background: var(--backgroundColor);
+  display: grid;
+  grid-template-rows: 20% 70% 20%;
+}
+
+.avatar-confirm-name {
+  font-family: Londrina;
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #b04da3;
+  width: 80%;
+  height: fit-content;
+  border-radius: 100px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 5px 5px 2px;
+  justify-self: center;
+  align-self: center;
+
+  > h1 {
+    text-shadow: rgba(0, 0, 0, 0.4) 0 0 10px;
+  }
+}
+
+.avatar-confirm-icon {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.avatar-confirm-icon .avatar-wrapper {
+  width: 45%;
+  height: 100%;
+}
+
+.avatar-confirm-icon .avatar-wrapper img {
+  width: 90%;
+  height: 100%;
+}
+
+.avatar-confirm-btns {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.confirmation-btn {
+  align-self: center;
+  justify-self: center;
+  height: min(12vh, 20vw);
+  width: min(30vh, 35vw);
+  transform-origin: top center;
+  transform: perspective(400px) rotateY(5deg);
+  z-index: 50;
+  background-color: #adc53a;
+  border-radius: 100px 120px 120px 100px;
+  border: 7px;
+  font-size: min(4vh, 5vw);
+  font-family: "Londrina";
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.386) 1px 1px 10px;
+  border: solid #7a8b23 2px;
+  overflow: hidden;
+}
+
+.confirmation-btn:active {
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.495);
+  border: inset 2px;
+  text-shadow: rgba(0, 0, 0, 0.495) 1px 1px 2px;
+}
+
+.confirmation-btn:nth-child(1) {
+  background-color: #b04da3;
+  border: solid #c660b9 2px;
+  transform: perspective(400px) rotateY(-5deg);
+}

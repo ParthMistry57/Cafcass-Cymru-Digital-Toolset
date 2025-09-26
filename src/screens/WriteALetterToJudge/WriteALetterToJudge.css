@@ -1,0 +1,140 @@
+.letter-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #87ceeb;
+  font-family: 'Arial', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+header, footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.letter-textarea {
+  width: 40vw;
+  height: 65vh;
+  padding: 10px;
+  font-size: 1.8vw;
+  font-family: 'Calibri', sans-serif;
+  border: none;
+  outline: none;
+  box-shadow: 10px 10px 0px 2px rgba(0, 0, 0, 0.15);
+  resize: none;
+  box-sizing: border-box;
+  margin-top: 20px;
+  overflow: hidden;
+  max-height: 65vh;
+}
+
+.undo-button {
+  background-image: url('../../assets/images/undo.png');
+  background-size: contain;
+  border: none;
+  width: 6vw;
+  height: 3vw;
+  font-size: 1.1vw;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  outline: none;
+  font-weight: bold;
+  margin: 20px;
+}
+
+.letter-textarea::placeholder {
+  color: #aaa;
+  font-style: 'Arial', sans-serif;
+}
+
+.undo-button:active {
+  transform: translateY(1vh);
+}
+
+.help-button {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.Avatar, .Judge {
+  position: absolute;
+  bottom: 16vh;
+  width: 10vw;
+  height: auto;
+}
+
+.Avatar {
+  left: 15vw;
+}
+
+.Judge {
+  right: 15vw;
+}
+
+.Avatar img, .Judge img{
+  width: 100%; 
+  height: auto;
+}
+
+.popup {
+  position: absolute;
+  top: 20vh;
+  right: 10vw;
+  background: url('../../assets/images/pop_up.png') no-repeat center center;
+  background-size: cover;
+  width: 250px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2vh;
+  z-index: 1000;
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+}
+
+.close-button {
+  align-self: flex-end;
+  cursor: pointer;
+  font-size: 2vw;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .letter-textarea {
+    font-size: 3vw;
+  }
+
+  .icon {
+    width: 8vw;
+    height: 8vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .letter-textarea {
+    font-size: 4vw;
+  }
+
+  .icon {
+    width: 10vw;
+    height: 10vw;
+  }
+}

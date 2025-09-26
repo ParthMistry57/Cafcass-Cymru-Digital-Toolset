@@ -1,0 +1,115 @@
+.test {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.slider-wrapper {
+    position: relative;
+    width: var(--width, 200px);
+    height: var(--height, 20px);
+    padding: 5px 15px;
+    border-radius: 30px;
+    border: 5px #4D64B0 solid;
+    background-color: #4D64B0;
+    z-index: 90;
+}
+.customSlider {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+.customSlider-track {
+  height: calc(var(--height, 20px) * 0.7);
+  align-self: center;
+  background: white;
+  border-radius: 20px;
+}
+.customSlider-track.customSlider-track-1 {
+  box-shadow: rgba(0, 0, 0, 0.3) inset 0px 2px 1px;
+  /* border-radius: 0 20px 20px 0; */
+}
+.customSlider-track.customSlider-track-0{
+  background: linear-gradient(0.25turn, var(--gradientStart, #ff0000), var(--gradientMiddle,#ffff00), var(--gradientEnd,#008000));
+  width: calc(var(--width, 200px));
+  content: "";
+  position: absolute;
+  left: 0;
+  
+}
+
+.customSlider-thumb {
+  cursor: pointer;
+  background: darkcyan;
+
+  width: var(--height, 20px);
+  aspect-ratio: 1;
+  border-radius: 100%;
+  outline: none;
+  /* display: none; */
+}
+  
+.customSlider-thumb:hover {
+  box-shadow: 0 0 0 1px black;
+}
+  
+.customSlider-mark {
+  /* position: absolute; */
+  /* transform: translateY(50%); */
+  cursor: pointer;
+  top: calc(var(--height, 20px) * 0.7);
+  width: 4px;
+  height: calc(var(--height, 20px) * 1.7); 
+  background-color: transparent;
+  /* background-color: white; */
+  border-left: black dashed 3px;
+  transform: translateX(-1px);
+
+}  
+  
+.customSlider-mark-bg {
+  content: "1";
+  color: white;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 1.2em;
+  aspect-ratio: 1;
+  border: 2px black solid;
+  left: 50%;
+  bottom: 0;
+  transform: translateY(150%) translateX(-50%);
+  border-radius: 100%;
+  background-color: #4D64B0;
+  font-size: 1.5em;
+}
+.customSlider-mark-bg {
+  content: "1";
+  color: white;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 1.2em;
+  aspect-ratio: 1;
+  border: 2px black solid;
+  left: 50%;
+  bottom: 0;
+  transform: translateY(150%) translateX(-50%);
+  border-radius: 100%;
+  background-color: #4D64B0;
+  font-size: 1.5em;
+}
+.customSlider-mark-bg-faces {
+  width: 40px;
+  height: 40px;
+  transform: translateY(50%) translateX(-50%);
+}
+
+

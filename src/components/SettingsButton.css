@@ -1,0 +1,193 @@
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway'), url(../assets/fonts/RalewayRegular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Londrina';
+    src: local('Londrina'), url(../assets/fonts/LondrinaSolidRegular.woff) format('woff');
+}
+
+:root {
+    --backgroundColor: #4D64B0;
+    --backgroundLighter: #667dc7;
+    --boxBackgroundColor: #B04DA3;
+    --boxBorderColor: #4D64B0;
+    --fontSize: 30px;
+    --fontFamily: Londrina;
+    --fontColor: white;
+    --buttonBgColor: #4D64B0; /* Blue */
+    --buttonHoverBgColor: #B04DA3; /* Pink */
+}
+
+.settings-wrapper {
+    position: absolute;
+    left: -42px; /* Initial position to only show the right half of an 84px wide button */
+    bottom: 50px;
+    z-index: 5000;
+    transition: left 0.3s; /* Smooth transition for hover effect */
+}
+
+.settings-wrapper:hover,
+.settings-wrapper.expanded {
+    left: 0; /* Move fully into view on hover or when expanded */
+}
+
+.settings-wrapper .settings-btn {
+    width: 84px;
+    height: 84px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.settings-wrapper .settings-btn img {
+    width: 100%;
+    height: 100%;
+}
+
+.settings-popup {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    left: 100%;
+    bottom: 0;
+    width: 400px;
+    height: 84px;
+    border-radius: 15px;
+    border: 2px solid var(--boxBorderColor);
+    background-color: #8ca7ff08;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 0 10px 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.settings-wrapper.expanded .settings-popup {
+    transform: scaleX(1);
+}
+
+.settings-popup-button {
+    background-color: var(--buttonBgColor); /* Default blue background color */
+    border: none;
+    color: var(--fontColor);
+    font-family: var(--fontFamily);
+    font-size: var(--fontSize);
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.settings-popup-button:hover {
+    background-color: var(--buttonHoverBgColor); /* Pink hover background color */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.settings-popup-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.settings-popup-button img {
+    width: 32px; /* Adjust the size as needed */
+    height: 32px; /* Adjust the size as needed */
+}
+
+.font-size-wrapper {
+    position: relative;
+}
+
+.font-size-controls {
+    position: absolute;
+    top: -4px;
+    left: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.font-size-control {
+    background-color: var(--buttonBgColor); /* Blue background color */
+    border: none;
+    color: var(--fontColor);
+    font-family: var(--fontFamily);
+    font-size: 24px; /* Font size for + and - */
+    width: 28px; /* Make buttons square */
+    height: 28px; /* Make buttons square */
+    padding: 0; /* Remove padding to keep buttons square */
+    cursor: pointer;
+    border-radius: 5px; /* Square buttons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    margin-left: 8px;
+}
+
+.font-size-control:hover {
+    background-color: var(--buttonHoverBgColor); /* Pink hover background color */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.font-size-control:active {
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.language-wrapper {
+    position: relative;
+}
+
+.language-controls {
+    position: absolute;
+    top: -4px;
+    left: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.language-control {
+    background-color: var(--buttonBgColor); /* Blue background color */
+    border: none;
+    color: var(--fontColor);
+    font-family: var(--fontFamily);
+    font-size: 18px; /* Font size for language options */
+    width: 28px; /* Adjust width as needed */
+    height: 28px; /* Adjust height as needed */
+    padding: 0; /* Remove padding */
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    margin-left: 8px;
+}
+
+.language-control:hover {
+    background-color: var(--buttonHoverBgColor); /* Pink hover background color */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.language-control:active {
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
+}

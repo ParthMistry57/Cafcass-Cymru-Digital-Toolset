@@ -1,0 +1,30 @@
+.draggable-sticker {
+  transform: scale(0.75); /* Scale down the sticker to 75% of its original size */
+  transition: transform 0.2s; /* Smooth transition when the scale changes */
+  position: relative;
+  cursor: pointer;
+  z-index: 2;
+}
+  
+.draggable-sticker:hover {
+  transform: scale(1); /* Scale back to original size when hovered */
+}
+
+.close-button {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: rgb(255, 55, 55);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 91;
+}

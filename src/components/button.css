@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'Raleway';
+    src: local('Raleway'), url(../assets/fonts/RalewayRegular.woff) format('woff');
+}
+@font-face {
+    font-family: 'Londrina';
+    src: local('Londrina'), url(../assets/fonts/LondrinaSolidRegular.woff) format('woff');
+  }
+
+.btn-wrapper{
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    top: 0;
+    left: 0;
+    transform: translateX(5%);
+    border-bottom: 15px transparent solid;
+    border-top: 15px transparent solid;
+    border-right: 15px transparent solid;
+}
+
+.btn {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 15%;
+    border: none;
+    color: white;
+    font-family: "Londrina";
+    text-shadow: rgba(0, 0, 0, 0.386) 1px 1px 10px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background: none;
+}
+
+
+.btn-img{
+    position: absolute;
+    top:0;
+    left:0;
+}
+.btn-img-shadow {
+    /* position: absolute; */
+    width: inherit;
+    height: inherit;
+    transform: translateX(-4%) translateY(10%);
+    filter: brightness(0);
+    opacity: 40%;
+    
+}
+.btn:enabled:active{
+    /* transform: translate(-3%, 5%); */
+    transform: translateX(-4%) translateY(8%);
+}
+

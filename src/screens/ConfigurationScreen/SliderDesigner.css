@@ -1,0 +1,331 @@
+.sliderScreen {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 90%;
+    grid-template-columns: 100%;
+    justify-content: center;
+    justify-items: center;
+    text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.4);
+    font-family: Londrina;
+    color: white;
+}
+.sliderScreen .sc-title {
+    color: white;
+    font-family: Londrina;
+    letter-spacing: 1px;
+    font-size: 3.3em;
+    margin: 0;
+    height: fit-content;
+    width: fit-content;
+    align-self: center;
+    text-decoration: underline;
+
+}
+.sliderScreen .sc-settings{
+    width: 80%;
+    height: 95%;   
+    display: grid;
+    grid-template-columns: 30% 60%;
+    grid-template-rows: 15% 75%;
+    grid-template-areas: "current_title new_title"
+                         "current_box new_box";
+    justify-content: space-between;
+
+    > h1 {
+        color: white;
+        font-family: Londrina;
+        margin: 0;
+        height: fit-content;
+        width: fit-content;
+        justify-self: center;
+        align-self: flex-end;
+        
+    }
+}
+.sc-sliders-list {
+    grid-area: current_box;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: max-content;
+    border-radius: 30px;
+    box-shadow: var(--boxShadow);
+    background: white;
+    padding: 0;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+}
+.sc-new-title {
+    grid-area: new_title;
+}
+.sc-new-sliders {
+    background: linear-gradient(to bottom left, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)) !important;
+    border: solid 1px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    position: relative;
+    grid-area: new_box;
+    display: grid;
+    gap: 10%;
+    grid-template-rows: 60% 30%;
+    grid-template-columns: 100%;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.sc-slider-result {
+    display: grid;
+    grid-template-rows: 15% 85%;
+    grid-template-columns: 100%;
+    height: 100%;
+    justify-items: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: var(--boxShadow);
+    > h4 {
+        margin: 0;
+        width: fit-content;
+        height: fit-content;
+        padding: 5px 20px;
+        background-color: #ADC53A;
+        box-shadow: rgba(0, 0, 0, 0.4) -2px 4px 2px;
+        font-size: 2.5em;
+        border-radius: 30px;
+        align-self: flex-end;
+    }
+
+}
+.sc-new-sliders-form-wrapper {
+    position: relative;;
+    display: grid;
+    grid-template-rows: 100% 10%;
+    grid-template-columns: 100%;
+    justify-content: start;
+    align-content: center;
+    align-items: center;
+}
+.reset-btn-div {
+    overflow: hidden;
+    justify-self: end;
+}
+.sc-new-sliders-form-wrapper .btn-wrapper {
+    scale: 0.3;   
+}
+.sc-new-sliders form {
+    display: grid;
+    grid-template-areas: "a b"
+                         "c d";
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 50%;
+    /* gap: 5%; */
+    align-items: center;
+    justify-items: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 1.5em;
+    font-size: 1.5em;
+    
+}
+.label-wrapper {
+    padding: 10px;
+    border-radius: 20px;
+    width: 80%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #4D64B0;
+    box-shadow: var(--boxShadow);
+
+    > h4 {
+        margin: 0;
+        text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.4);
+        letter-spacing: 1px;
+        text-decoration: underline;
+    }
+}
+.radio-labels div {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    font-size: 1em;
+}
+.radio-labels div label {
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    gap: 0.2em;
+    margin-top: 0.3em;
+    
+}
+.radio-labels div label input[type="radio"] {
+    position: relative;
+    display: grid;
+    place-content: center;
+    align-items: center;
+    appearance: none;
+    background-color: #fff;
+    font: inherit;
+    color: currentColor;
+    width: 1em;
+    height: 1em;
+    border: 0.15em solid currentColor;
+    border-radius: 50%;
+    margin: 0;
+  }
+input[type="radio"]::before {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 50%;
+    align-self: center;
+    justify-self: center;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em white;
+  }
+input[type="radio"]:checked::before {
+    transform: scale(1);
+  }
+.sc-new-sliders form label input{
+    text-align: center;
+    margin-block: auto;
+    border: none;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    outline: 0;
+}
+.radio-labels div label input[type="radio"] {
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.3) 0.6em, rgba(255, 255, 255, 0.2) 1.5em);
+    font-family: inherit;
+    color: inherit;
+    font-size: 1em;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    width: 1em;
+}
+.radio-labels div label input[type="radio"]:disabled {
+    border-color: gray !important;
+    position: relative;
+    display: flex;
+}
+.radio-labels div label input[type="radio"]:disabled::after {
+    border-color: red !important;
+    content: "X";
+    color: gray;
+    font-family: Raleway;
+    align-self: center;
+    position: absolute;
+}
+.sc-new-sliders form label select {
+    --arrow-bg: rgba(255, 255, 255, 0.3);
+    --arrow-icon: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg);
+    --select-bg: rgba(255, 255, 255, 0.2);
+    /* Reset */
+    appearance: none;
+    border: 0;
+    outline: 0;
+    font: inherit;
+
+    /* Personalize */
+    width: 90%;
+    padding: 0.5em 2em 0.5em 0.5em;
+    background: var(--arrow-icon) no-repeat right 0.5em center / 1.0em,
+        linear-gradient(to left, var(--arrow-bg) 2em, var(--select-bg) 2.5em);
+    color: white;
+    border-radius: 0.25em;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    /* emove IE arrow */
+    &::-ms-expand {
+        display: none;
+    }
+    /* emove focus outline */
+    &:focus {
+        outline: none;
+    }
+    /* <option> colors */
+    
+}
+.sc-new-sliders form label select option {
+    color: inherit;
+    background-color: #4D64B0;
+}
+#gradient-color {
+    display: grid;
+    grid-area: d;
+    grid-template-rows: 35% 65%;
+    width: 80%;
+    height: 50%;
+    align-self: center;
+    justify-self: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    > h4 {
+        margin: 0;
+    }
+    >div {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        gap: 25px;
+        align-items: center;
+        justify-content: center;
+
+        > input {
+            height: 60%;
+            scale: 1.4;
+        }
+    }
+
+}
+
+
+.sc-new-sliders {
+    border-radius: 30px;
+    background: none;
+}
+
+
+.sliderScreen > .saveBtn{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    scale: 0.8;
+}
+.save-slider-btn{
+    position: absolute;
+    display: flex;
+    transform: translate(80%, 15%);
+    right:  0;
+    bottom: -3%;
+    scale: 0.5;
+}
+.saved-sliders-message {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 3.5em;
+    padding: 80px;
+    color: rgba(0, 0, 0, 0.1);
+    text-shadow: none;
+}
+
+
+
+#stepsRadioForm div {
+    width: 60%;
+}
+#gradRadioForm div {
+    width: 70%;
+}
+#typeRadioForm {
+    width: 90%;
+}
